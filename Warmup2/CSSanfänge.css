@@ -1,0 +1,73 @@
+footer {
+    background-color: rgb(12, 12, 107);
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 18px;
+    padding: 20px;
+}
+
+body {
+    background-color: rgb(89, 99, 146);
+}
+
+main {
+    padding: 80px;
+
+}
+
+h1 {
+    font-size: 40px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: rgb(33, 105, 168);
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-decoration: none;
+    display: block;
+    
+    
+}
+
+nav {
+    background-color: rgb(33, 105, 168);
+    color: white;
+    text-decoration: none;
+    list-style-type: circle;
+   
+    
+}
+
+ul {
+
+    padding: 30px;
+    
+    
+
+}
+
+li {
+    list-style-type: none;
+    color: white;
+    margin: 20px;
+    display:inline
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+    
+}
