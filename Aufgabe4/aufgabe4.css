@@ -1,23 +1,43 @@
 body {
     background-color: rgb(255, 255, 255);
-    margin-left: 200px;
-    margin-right: 200px;
-    
+    margin: 0px;
     
 }
 
+main {
+    margin-left: 150px;
+    margin-right: 150px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
 
+.imgsize1 {
+   height: 250px;
+
+}
+
+.clipsize1 {
+    height: 250px;
+
+}
 
 .navigation1 {
     display: inline;
-    
     text-decoration: none;
     color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
     margin-top: 70px;
-    
+    margin: 20px;
+}
 
+#navcontact {
+    margin-right: 150px;
+}
+
+#navlogo {
+    margin-left: 150px;
+    
 }
 
 
@@ -32,13 +52,15 @@ a {
     
     text-decoration: none;
     color: gray;
-    margin: 20px;
+    
     
 }
 
 footer {
-    background-color: gray;
-    
+    background-color: rgb(218, 217, 217);
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
 }
 
@@ -71,6 +93,7 @@ nav {
 
 ul {
     text-align: right;
+    
 }
 
 header {
@@ -79,28 +102,71 @@ header {
    
 }
 .footer1 {
-    color: rgb(29, 29, 29);
+    color: grey;
     text-align: left;
     list-style-type: none;
-    
+    margin-left: 150px;
 
 }
+
+#footer1text {
+   
+}
 .footer2 {
-    color: rgb(29, 29, 29);
+    color: grey;
     text-align: center;
     list-style-type: none;
     width: 40px;
     height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    display: inline-flex;
+}
+
+#footer2text {
+    display: block;
+    width: 80px;
 }
 .footer3 {
-    color: rgb(29, 29, 29);
+    color: grey;
     text-align: right;
     list-style-type: none;
-    
+    margin-right: 300px;
 }
 input {
     
     background-color: gray;
     margin: 10px;
+    width: 500px;
+    color: white;
+    border: none;
+    
+}
 
+#input1 {
+    height: 20px;
+    
+}
+
+#input2 {
+    height: 20px;
+}
+
+#input3 {
+    height: 170px;
+    
+    
+}
+
+#button1 {
+    width: 60px;
+}
+
+::placeholder {
+    color: white;
+    position: fixed;
+}
+:focus {
+    outline: none;
 }
