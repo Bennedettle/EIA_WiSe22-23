@@ -1,0 +1,55 @@
+.btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 500px;
+    margin-right: 500px;
+    justify-content: center;
+}
+
+.btn {
+    width: 150px;
+    height: 150px;
+    background-color: #0000ff;
+    margin: 3px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 145px;
+    font-size: 25px;
+    
+}
+
+body {
+    background-color: #000000;    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1 {
+    color: #faebd4
+}
+
+.playbtn {
+    text-align: center;
+}
+
+#btn4 {
+    background-color: #dc143c;
+}
+
+#btn5 {
+    background-color: #dc143c;
+}
+
+#btn6 {
+    background-color: #dc143c;
+}
+
+#btn7 {
+    background-color: #dc143c;
+}
+
+#btn8 {
+    background-color: #ff8c00;
+}
+
+#btn9 {
+    background-color: #ff8c00;
+}
