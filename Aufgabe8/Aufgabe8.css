@@ -26,9 +26,23 @@ h1 {
     color: #faebd4
 }
 
-.playbtn {
-    text-align: center;
+#playbtn {
+    display: flex;
+    color: #faebd4;
+    justify-content: center;
+    font-size: 100px;
+
 }
+
+#remixbtn {
+    display: flex;
+    color: #faebd4;
+    justify-content: center;
+    font-size: 100px;
+
+}
+
+
 
 #btn4 {
     background-color: #dc143c;

@@ -16,12 +16,13 @@ function addClickListenersDrumPad() {
     document.querySelector("#btn7").addEventListener("click", function () { playSample(sounds[6]); });
     document.querySelector("#btn8").addEventListener("click", function () { playSample(sounds[7]); });
     document.querySelector("#btn9").addEventListener("click", function () { playSample(sounds[8]); });
-    document.querySelector(".playbtn").addEventListener("click", function () { playBeat(); });
+    document.querySelector("#playbtn").addEventListener("click", function () { PlayBeat(); });
+    document.querySelector("#remixbtn").addEventListener("click", function () { Remix(); });
 }
 //lol
 var Beat = [sounds[4], sounds[5], sounds[8]];
 var rhythm = 1;
-function playBeat() {
+function PlayBeat() {
     setInterval(function () {
         playSample(Beat[rhythm]);
         rhythm++;
@@ -29,5 +30,22 @@ function playBeat() {
             rhythm = 0;
         }
     }, 300);
+    if (document.getElementById("playbtn").classList.contains("fa-play")) {
+        document.getElementById("playbtn").classList.remove("fa-play");
+        document.getElementById("playbtn").classList.add("fa-stop");
+    }
+    else {
+        document.getElementById("playbtn").classList.remove("fa-stop");
+        document.getElementById("playbtn").classList.add("fa-play");
+    }
+}
+var beatremix;
+function Remix() {
+    document.querySelector("#remixbtn").addEventListener("click", function () {
+        beatremix = setInterval(function () {
+            playSample(Beat[rhythm]);
+            rhythm = Math.floor(Math.random() * 6);
+        }, 300);
+    });
 }
 //# sourceMappingURL=Aufgabe8.js.map
