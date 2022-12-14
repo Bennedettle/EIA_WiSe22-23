@@ -29,28 +29,32 @@ var Beat: string[] = [sounds[4], sounds[5], sounds[8]];
 
 var rhythm: number = 1;
 
+var myInterval: number;
+
+
+function normalBeat(): void {
+    playSample(Beat[rhythm]);
+    rhythm++;
+    if (rhythm == 4) {
+        rhythm = 0;
+    }
+}
+
+
+
 function PlayBeat(): void {
-    setInterval(function (): void {
-        playSample(Beat[rhythm]);
-        rhythm++;
-        if (rhythm == 4) {
-            rhythm = 0;
-        }
-    }, 300);
-
-
-
-
 
 
     if (document.getElementById("playbtn").classList.contains("fa-play")) {
         document.getElementById("playbtn").classList.remove("fa-play");
         document.getElementById("playbtn").classList.add("fa-stop");
+        myInterval = setInterval(normalBeat, 300)
 
     }
     else {
         document.getElementById("playbtn").classList.remove("fa-stop");
         document.getElementById("playbtn").classList.add("fa-play");
+        clearInterval(myInterval);
 
     }
 
@@ -58,16 +62,19 @@ function PlayBeat(): void {
 
 var beatremix: number;
 
-function Remix(): void {
+let rhythm1: number = 0
 
+let beatrandom1: number
+let beatrandom2: number
 
-    document.querySelector("#remixbtn").addEventListener("click", function (): void {
+let remix: any = function () {
+    rhythm1 = Math.floor(Math.random() * 8)
+    playSample(sounds[rhythm1]);
 
-        beatremix = setInterval(function (): void {
-            playSample(Beat[rhythm]);
-            rhythm = Math.floor(Math.random() * 6);
-        },
-            300);
-    });
-
-}
+};
+function Remix() {
+    if (!beatrandom2) {
+        beatrandom2 = setInterval(remix, 350)
+        clearInterval(myInterval);
+    }
+}   

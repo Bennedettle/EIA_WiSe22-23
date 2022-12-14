@@ -22,30 +22,38 @@ function addClickListenersDrumPad() {
 //lol
 var Beat = [sounds[4], sounds[5], sounds[8]];
 var rhythm = 1;
+var myInterval;
+function normalBeat() {
+    playSample(Beat[rhythm]);
+    rhythm++;
+    if (rhythm == 4) {
+        rhythm = 0;
+    }
+}
 function PlayBeat() {
-    setInterval(function () {
-        playSample(Beat[rhythm]);
-        rhythm++;
-        if (rhythm == 4) {
-            rhythm = 0;
-        }
-    }, 300);
     if (document.getElementById("playbtn").classList.contains("fa-play")) {
         document.getElementById("playbtn").classList.remove("fa-play");
         document.getElementById("playbtn").classList.add("fa-stop");
+        myInterval = setInterval(normalBeat, 300);
     }
     else {
         document.getElementById("playbtn").classList.remove("fa-stop");
         document.getElementById("playbtn").classList.add("fa-play");
+        clearInterval(myInterval);
     }
 }
 var beatremix;
+let rhythm1 = 0;
+let beatrandom1;
+let beatrandom2;
+let remix = function () {
+    rhythm1 = Math.floor(Math.random() * 8);
+    playSample(sounds[rhythm1]);
+};
 function Remix() {
-    document.querySelector("#remixbtn").addEventListener("click", function () {
-        beatremix = setInterval(function () {
-            playSample(Beat[rhythm]);
-            rhythm = Math.floor(Math.random() * 6);
-        }, 300);
-    });
+    if (!beatrandom2) {
+        beatrandom2 = setInterval(remix, 350);
+        clearInterval(myInterval);
+    }
 }
 //# sourceMappingURL=Aufgabe8.js.map
