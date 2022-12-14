@@ -40,6 +40,7 @@ function PlayBeat() {
         document.getElementById("playbtn").classList.remove("fa-stop");
         document.getElementById("playbtn").classList.add("fa-play");
         clearInterval(myInterval);
+        clearInterval(beatrandom2);
     }
 }
 var beatremix;
@@ -54,6 +55,15 @@ function Remix() {
     if (!beatrandom2) {
         beatrandom2 = setInterval(remix, 350);
         clearInterval(myInterval);
+    }
+    if (document.getElementById("playbtn").classList.contains("fa-play")) {
+        document.getElementById("playbtn").classList.remove("fa-play");
+        document.getElementById("playbtn").classList.add("fa-stop");
+    }
+    else {
+        document.getElementById("playbtn").classList.contains("fa-stop");
+        document.getElementById("playbtn").classList.remove("fa-stop");
+        document.getElementById("playbtn").classList.add("fa-play");
     }
 }
 //# sourceMappingURL=Aufgabe8.js.map
