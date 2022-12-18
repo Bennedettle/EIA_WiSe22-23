@@ -80,15 +80,15 @@ function Remix() {
     }
     if (document.getElementById("playbtn").classList.contains("fa-play")) {
         document.getElementById("playbtn").classList.remove("fa-play");
-        document.getElementById("playbtn").classList.add("fa-stop"); 
-        
+        document.getElementById("playbtn").classList.add("fa-stop");
+
 
     }
     else {
         document.getElementById("playbtn").classList.contains("fa-stop")
         document.getElementById("playbtn").classList.remove("fa-stop");
         document.getElementById("playbtn").classList.add("fa-play");
-        
+
 
     }
 
