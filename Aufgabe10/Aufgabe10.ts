@@ -18,7 +18,7 @@ window.addEventListener("load", function (): void {
 
 
         let div: HTMLDivElement = document.createElement("div");
-        div.className = "toDoItem";
+        div.className = "newTask";
 
         let label: HTMLLabelElement = document.createElement("label");
         label.innerHTML = enter.value;
@@ -28,10 +28,51 @@ window.addEventListener("load", function (): void {
         checkbox.type = "checkbox";
         checkbox.className = "checkbox";
 
+        let trashbutton: HTMLElement = document.createElement("i")
+        trashbutton.className = "fas fa-trash"
+
         document.getElementById("tasks").appendChild(div);
         div.appendChild(label);
         div.appendChild(checkbox);
+        div.appendChild(trashbutton)
 
-        
+        taskNumber++
+        taskCount()
+
+
+
+        function deleteTask(div: HTMLDivElement): void {
+            div.remove();
+
+
+            taskNumber--
+            taskCount()
+
+        }
+
+        trashbutton.addEventListener("click", function (event: MouseEvent): void {
+            deleteTask(div);
+
+        })
+
+
+
+
+
     }
+
+    let taskNumber: number = 0
+
+    function taskCount(): void {
+        if (taskNumber == 1) {
+        document.getElementById("number").innerText = taskNumber + " Task";
+      } else {
+        document.getElementById("number").innerText = taskNumber + " Tasks";
+      }
+
+    
+    }
+
+    
+
 })

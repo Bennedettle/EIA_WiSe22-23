@@ -7,6 +7,7 @@ input {
 
 body {
     background-color: lightgrey;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h1 {
@@ -15,4 +16,26 @@ h1 {
 
 #tasks {
     font-size: 50px;
+}
+
+.fa-trash {
+    color: black;
+    font-size: 30px
+}
+
+.checkbox {
+    font-size: 50px;
+    size: 50px;
+    margin: 10px;
+    border: 0px;
+    height: 30px;
+    width: 30px;
+}
+
+.taskText {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#number{
+    font-size: 30px;
 }
