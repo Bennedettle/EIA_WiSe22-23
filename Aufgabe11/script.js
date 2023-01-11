@@ -41,10 +41,11 @@ function updateCounter() {
 }
 function addTodo() {
     if (inputDOMElement.value != "") {
-        todos.push({
+        const newtodo = ({
             text: inputDOMElement.value,
             checked: false,
         });
+        todos.unshift(newtodo);
         inputDOMElement.value = "";
         drawListToDOM();
     }

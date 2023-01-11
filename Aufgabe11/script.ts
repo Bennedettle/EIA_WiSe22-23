@@ -58,10 +58,11 @@ interface Todo {
   
   function addTodo(): void {
     if (inputDOMElement.value != "") {
-      todos.push({
+      const newtodo: Todo = ({
         text: inputDOMElement.value,
         checked: false,
       });
+      todos.unshift(newtodo);
   
       inputDOMElement.value = "";
   
